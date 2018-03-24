@@ -1,0 +1,122 @@
+{
+    "o3d3xx":
+    {
+        "libo3d3xx": "108",
+        "Date": "Wed Aug 26 15:50:00 2015",
+        "HWInfo":
+        {
+            "Mainboard": "#!02_M381_001_12345678_008022169",
+            "Illumination": "#!02_I300_001_12345678_008001175",
+            "MACAddress": "00:02:01:40:14:35",
+            "Frontend": "#!02_F341_002_12345678_008022593",
+            "Diagnose": "#!02_D321_001_12345678_008022488",
+            "Connector": "#!02_A300_001_12345678_008001175"
+        },
+        "SWVersion":
+        {
+            "IFM_Software": "0.06.39",
+            "Linux": "Linux version 3.11.0-00001-g4e630e2 (eswadmin@dettlx79) (gcc version 4.7.2 (GCC) ) #1 SMP Mon Jun 8 10:25:20 CEST 2015",
+            "Diagnostic_Controller": "0.3.2",
+            "ELDK": "GOLDENEYE_ELDK-2015-07-01_16-26-37-cc5673110f1bff06b66149c8320f6c1823d87891",
+            "Calibration_Version": "0.6.2",
+            "Calibration_Device": "00:02:01:40:14:35",
+            "Main_Application": "0.4.12",
+            "Algorithm_Version": "0.6.18"
+        },
+        "Device":
+        {
+            "Name": "New sensor",
+            "Description": "",
+            "ActiveApplication": "1",
+            "PcicEipEnabled": "false",
+            "PcicTcpPort": "50010",
+            "PcicProtocolVersion": "3",
+            "IOLogicType": "1",
+            "IODebouncing": "true",
+            "IOExternApplicationSwitch": "0",
+            "SessionTimeout": "30",
+            "ServiceReportPassedBuffer": "15",
+            "ServiceReportFailedBuffer": "15",
+            "ExtrinsicCalibTransX": "0",
+            "ExtrinsicCalibTransY": "0",
+            "ExtrinsicCalibTransZ": "0",
+            "ExtrinsicCalibRotX": "0",
+            "ExtrinsicCalibRotY": "0",
+            "ExtrinsicCalibRotZ": "0",
+            "IPAddressConfig": "0",
+            "PasswordActivated": "false",
+            "OperatingMode": "0",
+            "DeviceType": "",
+            "ArticleNumber": "",
+            "ArticleStatus": "",
+            "UpTime": "6.952586354768227e-310",
+            "ImageTimestampReference": "38389392",
+            "TemperatureFront1": "1.896699832768779e-316",
+            "TemperatureFront2": "6.952552768050496e-310",
+            "TemperatureIMX6": "1.896711690344279e-316",
+            "TemperatureIllu": "1.896723547919779e-316"
+        },
+        "Net":
+        {
+            "MACAddress": "",
+            "NetworkSpeed": "0",
+            "StaticIPv4Address": "192.168.0.69",
+            "StaticIPv4SubNetMask": "255.255.255.0",
+            "StaticIPv4Gateway": "192.168.0.201",
+            "UseDHCP": "false"
+        },
+        "Apps":
+        [
+            {
+                "Name": "Sample Application",
+                "Description": "",
+                "TriggerMode": "1",
+                "PcicTcpResultOutputEnabled": "true",
+                "PcicTcpResultSchema": "{ \"layouter\": \"flexible\", \"format\": { \"dataencoding\": \"ascii\" }, \"elements\": [ { \"type\": \"string\", \"value\": \"star\", \"id\": \"start_string\" }, { \"type\": \"blob\", \"id\": \"normalized_amplitude_image\" }, { \"type\": \"blob\", \"id\": \"distance_image\" }, { \"type\": \"blob\", \"id\": \"x_image\" }, { \"type\": \"blob\", \"id\": \"y_image\" }, { \"type\": \"blob\", \"id\": \"z_image\" }, { \"type\": \"blob\", \"id\": \"confidence_image\" }, { \"type\": \"blob\", \"id\": \"diagnostic_data\" }, { \"type\": \"string\", \"value\": \"stop\", \"id\": \"end_string\" } ] }",
+                "PcicEipResultSchema": "{ \"layouter\": \"flexible\", \"format\": { \"dataencoding\": \"binary\", \"order\": \"big\" }, \"elements\" : [ { \"type\": \"string\", \"value\": \"star\", \"id\": \"start_string\" }, { \"type\": \"records\", \"id\": \"models\", \"elements\": [ { \"type\": \"int16\", \"id\": \"boxFound\" }, { \"type\": \"int16\", \"id\": \"width\", \"format\": { \"scale\": 1000 } }, { \"type\": \"int16\", \"id\": \"height\", \"format\": { \"scale\": 1000 } }, { \"type\": \"int16\", \"id\": \"length\", \"format\": { \"scale\": 1000 } }, { \"type\": \"int16\", \"id\": \"xMidTop\", \"format\": { \"scale\": 1000 } }, { \"type\": \"int16\", \"id\": \"yMidTop\", \"format\": { \"scale\": 1000 } }, { \"type\": \"int16\", \"id\": \"zMidTop\", \"format\": { \"scale\": 1000 } }, { \"type\": \"int16\", \"id\": \"yawAngle\" }, { \"type\": \"int16\", \"id\": \"qualityLength\" }, { \"type\": \"int16\", \"id\": \"qualityWidth\" }, { \"type\": \"int16\", \"id\": \"qualityHeight\" } ] }, { \"type\": \"string\", \"value\": \"stop\", \"id\": \"end_string\" } ] }",
+                "LogicGraph": "{\"IOMap\": {\"OUT1\": \"RFT\",\"OUT2\": \"AQUFIN\"},\"blocks\": {\"B00001\": {\"pos\": {\"x\": 200,\"y\": 200},\"properties\": {},\"type\": \"PIN_EVENT_IMAGE_ACQUISITION_FINISHED\"},\"B00002\": {\"pos\": {\"x\": 200,\"y\": 75},\"properties\": {},\"type\": \"PIN_EVENT_READY_FOR_TRIGGER\"},\"B00003\": {\"pos\": {\"x\": 600,\"y\": 75},\"properties\": {\"pulse_duration\": 0},\"type\": \"DIGITAL_OUT1\"},\"B00005\": {\"pos\": {\"x\": 600,\"y\": 200},\"properties\": {\"pulse_duration\": 0},\"type\": \"DIGITAL_OUT2\"}},\"connectors\": {\"C00000\": {\"dst\": \"B00003\",\"dstEP\": 0,\"src\": \"B00002\",\"srcEP\": 0},\"C00001\": {\"dst\": \"B00005\",\"dstEP\": 0,\"src\": \"B00001\",\"srcEP\": 0}}}",
+                "Type": "Camera",
+                "Index": "1",
+                "Id": "1748941265",
+                "Imager":
+                {
+                    "Channel": "0",
+                    "ClippingBottom": "131",
+                    "ClippingLeft": "0",
+                    "ClippingRight": "175",
+                    "ClippingTop": "0",
+                    "ContinuousAutoExposure": "false",
+                    "EnableAmplitudeCorrection": "true",
+                    "EnableFilterAmplitudeImage": "true",
+                    "EnableFilterDistanceImage": "true",
+                    "EnableRectificationAmplitudeImage": "false",
+                    "EnableRectificationDistanceImage": "false",
+                    "ExposureTime": "5000",
+                    "ExposureTimeList": "125;5000",
+                    "ExposureTimeRatio": "40",
+                    "FrameRate": "5",
+                    "MinimumAmplitude": "42",
+                    "ReduceMotionArtifacts": "false",
+                    "SpatialFilterType": "0",
+                    "SymmetryThreshold": "0",
+                    "TemporalFilterType": "0",
+                    "ThreeFreqMax2FLineDistPercentage": "80",
+                    "ThreeFreqMax3FLineDistPercentage": "80",
+                    "TwoFreqMaxLineDistPercentage": "80",
+                    "Type": "under5m_moderate",
+                    "SpatialFilter":
+                    {
+                        "Type": "0",
+                        "TypeStr_": "Off"
+                    },
+                    "TemporalFilter":
+                    {
+                        "Type": "0",
+                        "TypeStr_": "Off"
+                    }
+                }
+            }
+        ]
+    }
+}
+
