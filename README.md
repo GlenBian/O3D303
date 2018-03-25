@@ -57,8 +57,9 @@ cmake ..
 make -j4
 sudo make -j2 install
 ```
+## Fast install method (Not recommended)
 
-## Building the libo3d3xx
+### Building the libo3d3xx
 
 Assuming you are starting from the top-level directory of this source
 distribution:
@@ -68,7 +69,9 @@ distribution:
     $ cmake ..
     $ sudo make
     
-## Building the camera module
+## Make three modules (Recommended)
+
+### Building the camera module
 
 Assuming you are starting from the top-level directory of this source
 distribution:
@@ -82,7 +85,7 @@ distribution:
     $ sudo apt-get -f install
     $ sudo dpkg -i libo3d3xx-camera_0.4.0_amd64.deb
     
-## Building the framegrabber module
+### Building the framegrabber module
 
 *(You must ensure that you have already installed the camera module prior to
  building and installing the framegrabber module.)*
