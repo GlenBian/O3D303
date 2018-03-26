@@ -114,6 +114,52 @@ distribution:
  ```
  sudo apt-get -f install
  ```
+ 
+ When you sudo make , you will have o3d3_viewer error:
+ 
+ ```
+ cd ~/libo3d3xx-master/modules/image/src/bin
+ sudo gedit CMakeLists.txt
+ ```
+ 
+ Make some change:
+ 
+ ```
+ #if(BUILD_EXE_VIEWER)
+#  add_executable(o3d3xx-viewer o3d3xx-viewer.cpp)
+
+#  if(BUILD_SHARED_LIBS)
+#    target_link_libraries(o3d3xx-viewer
+#      o3d3xx_image_shared
+#      ${O3D3XX_CAMERA_LIBRARIES}
+#      ${O3D3XX_FRAMEGRABBER_LIBRARIES}
+#      ${PCL_VISUALIZATION_LIBRARIES}
+#      ${OpenCV_LIBRARIES}
+#      ${LIB_boost_program_options}
+#      )
+#  else()
+#    target_link_libraries(o3d3xx-viewer
+#      o3d3xx_image_static
+#      ${O3D3XX_CAMERA_LIBRARIES}
+##      ${O3D3XX_FRAMEGRABBER_LIBRARIES}
+#      ${PCL_VISUALIZATION_LIBRARIES}
+#      ${OpenCV_LIBRARIES}
+#      ${LIB_boost_program_options}
+#      )
+#  endif(BUILD_SHARED_LIBS)
+
+#  set_target_properties(o3d3xx-viewer PROPERTIES
+#    AUTOMOC TRUE
+#    COMPILE_FLAGS "-Wno-deprecated"
+#    )
+
+#  install(TARGETS o3d3xx-viewer DESTINATION bin)
+#
+#  list(APPEND O3D3XX_EXE_TARGETS o3d3xx-viewer)
+#else()
+#  message(STATUS "Skipping o3d3xx-viewer")
+#endif(BUILD_EXE_VIEWER)
+ ```
 
 ## catkin_make o3d3xx-ros pkg
 
