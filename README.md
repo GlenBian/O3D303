@@ -57,18 +57,6 @@ cmake ..
 make -j4
 sudo make -j2 install
 ```
-## Fast install method (Not recommended)
-
-### Building the libo3d3xx
-
-Assuming you are starting from the top-level directory of this source
-distribution:
-
-    $ mkdir build
-    $ cd build
-    $ cmake ..
-    $ sudo make
-    
 ## Make three modules (Recommended)
 
 ### Building the camera module
@@ -101,3 +89,37 @@ distribution:
     $ sudo make package
     $ sudo dpkg -i libo3d3xx-framegrabber_0.4.0_amd64.deb
 
+#### Building the image module
+
+Assuming you are starting from the top-level directory of this source
+distribution:
+
+    $ cd modules/image
+    $ mkdir build
+    $ cd build
+    $ cmake -DBUILD_TESTS=OFF -DCMAKE_INSTALL_PREFIX=/usr ..
+    $ sudo make
+    $ sudo make check
+    $ sudo make package
+    $ sudo dpkg -i libo3d3xx-image_0.4.0_amd64.deb
+    
+ When you dpkg this deb,if maybe have this error:
+ 
+ ```
+ libo3d3xx-image 依赖于 libopencv-core-dev；然而：未安装软件包 libopencv-core-dev。
+ ```
+ 
+ So you want to sudo apt-get install libopencv-*, but still have error,the solution is:
+ 
+ ```
+ sudo apt-get -f install
+ ```
+
+## catkin_make o3d3xx-ros pkg
+
+```
+cd ~/catkin_ws/src
+git clone https://github.com/lovepark/o3d3xx-ros.git
+cd ..
+catkin_make
+```
