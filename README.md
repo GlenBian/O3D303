@@ -169,3 +169,8 @@ git clone https://github.com/lovepark/o3d3xx-ros.git
 cd ..
 catkin_make
 ```
+
+```
+roslaunch o3d3xx camera.launch
+roslaunch o3d3xx rviz.launch
+```
