@@ -72,7 +72,9 @@ distribution:
     $ sudo make package
     $ sudo apt-get -f install
     $ sudo dpkg -i libo3d3xx-camera_0.4.0_amd64.deb
-    
+
+> * libo3d3xx-camera 依赖于 libxmlrpc-c++8-dev (>= 1.33)；然而： 未安装软件包 libxmlrpc-c++8-dev。解决方法：`sudo apt-get install libxmlrpc-c++8-dev` 如果安装过程报错，输入`sudo apt-get -f install` ，再继续安装.
+
 ### Building the framegrabber module
 
 *(You must ensure that you have already installed the camera module prior to
